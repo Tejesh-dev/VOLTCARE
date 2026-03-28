@@ -57,7 +57,7 @@ export const products: Product[] = [
     price: 900,
     unit: "roll (90m)",
     stock: 120,
-    image: imgPlaceholder,
+    image: "/public/images/wire.jpg",
     description: "1.0 sq. mm FR PVC Insulated Copper Wire",
     availableSizes: ["1.0 sq mm"],
     availableColors: ["Red", "Blue", "Green", "Black", "Yellow", "White"],
