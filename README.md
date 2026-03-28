@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # VoltCare Billing Application
 
 A professional billing and customer management application built for **VoltCare** — an electrical, plumbing, and hardware solutions company.
@@ -169,3 +170,7 @@ npm run preview
 ## 📝 License
 
 This project is proprietary to VoltCare.
+=======
+# VOLTCARE
+BILL PRO
+>>>>>>> 6f5df9650ee06557e14225f549f144eb9f286d0d
