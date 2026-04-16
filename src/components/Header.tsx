@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Search, Settings, Menu, X, LayoutDashboard } from 'lucide-react';
+import { ShoppingCart, Search, Settings, Menu, X, LayoutDashboard, Droplets } from 'lucide-react'; // Added Droplets icon
 import { useCart } from '@/context/CartContext';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
@@ -51,6 +51,18 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           >
             Products
           </Link>
+
+          {/* ADDED PLUMBING LINK FOR DESKTOP */}
+          <Link
+            to="/plumbing"
+            className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
+              location.pathname === '/plumbing' ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-secondary'
+            }`}
+          >
+            <Droplets className="h-4 w-4" />
+            Plumbing
+          </Link>
+
           <Link
             to="/dashboard"
             className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
@@ -78,7 +90,7 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           </Link>
         </nav>
 
-        {/* Mobile */}
+        {/* Mobile menu buttons */}
         <div className="flex md:hidden items-center gap-1">
           <Link to="/cart" className="relative p-2">
             <ShoppingCart className="h-5 w-5" />
@@ -107,10 +119,18 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
         </div>
       </div>
 
+      {/* Mobile Menu Content */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-card animate-fade-in">
           <nav className="flex flex-col p-4 gap-1">
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg hover:bg-secondary font-medium">Products</Link>
+            
+            {/* ADDED PLUMBING LINK FOR MOBILE */}
+            <Link to="/plumbing" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg hover:bg-secondary font-medium flex items-center gap-2 text-voltcare-blue">
+              <Droplets className="h-4 w-4" />
+              Plumbing Section
+            </Link>
+
             <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg hover:bg-secondary font-medium">Dashboard</Link>
             <Link to="/admin" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-lg hover:bg-secondary font-medium">Admin Panel</Link>
           </nav>
