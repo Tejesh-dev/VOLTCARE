@@ -11,6 +11,7 @@ import InvoicePage from "./pages/InvoicePage";
 import AdminPage from "./pages/AdminPage";
 import DashboardPage from "./pages/DashboardPage";
 import NotFound from "./pages/NotFound";
+import PlumbingCatalog from './pages/PlumbingCatalog';
 
 const queryClient = new QueryClient();
 
