@@ -30,6 +30,7 @@ const App = () => (
               <Route path="/dashboard" element={<DashboardPage />} />
               <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/plumbing" element={<PlumbingCatalog />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
