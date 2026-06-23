@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Product, ProductVariant } from '@/data/types';
+import type { Product, ProductVariant } from '@/data/types';
 import { useCart } from '@/context/CartContext';
 import { Plus, Minus, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
